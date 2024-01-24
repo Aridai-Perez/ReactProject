@@ -1,4 +1,5 @@
 import { Route, Routes } from 'react-router-dom';
+import About from './Components/About.jsx'
 import Navbar from './Components/Navbar.jsx'
 import Main from './Components/Main.jsx'
 import Astros from './Components/Astros.jsx'
@@ -8,7 +9,7 @@ function App() {
 
     const linksData = [
         { name: 'Home', href: '/'},
-        { name: 'About', href: '/'},
+        { name: 'About', href: '/about'},
         { name: 'Astros', href: '/astros'},
     ]
 
@@ -23,6 +24,10 @@ function App() {
                 <Route 
                     element={<Astros />}
                     path='/astros'
+                />
+                <Route 
+                    element={<About />}
+                    path='/about'
                 />
             </Routes>
         </>
